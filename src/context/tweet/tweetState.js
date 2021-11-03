@@ -1,6 +1,7 @@
-import React, {useReducer, useState} from 'react'
+import React, {useReducer, useState, useEffect} from 'react'
 import TweetContext from './tweetContext'
 import TweetReducer from './tweetReducer'
+import axios from "axios";
 import {GET_TWEET,
         ADD_TWEET,
         DELETE_TWEET,
@@ -15,42 +16,38 @@ import {GET_TWEET,
         const [state, dispatch] = useReducer(TweetReducer, tweets);
         // FUNCIONES
 
-       // Obtener todos los proyectos
-       const getTweets = () => {
-        try {
-            const resultado = JSON.parse(localStorage.getItem('tweets'))
-            console.log('resultado', resultado)
-            return resultado;
-        //   dispatch({
-        //       type: GET_TWEET, 
-        //       payload: resultado
-        //   })
-        } catch (error) {
-          console.log(error)
-        }
-      }
-      getTweets()
+        useEffect(() => {
+            const getAllTweets = async () => {
+                const url = `https://micro-blogging-dot-full-stack-course-services.ew.r.appspot.com/tweet`;
+                const resultado = await axios(url);
+                setTweets(resultado.data.tweets);
+                console.log(resultado.data.tweets)
+                }
+                getAllTweets();
+                console.log('All tw', tweets)
+                // eslint-disable-next-line
+        }, [setTweets]);
+    
        
-      // Agregar proyecto
-    const addTweet =  tweet => {
+      // Add tweet
+    const addTweet = async (tweet) => {
         try {
+         await axios.post(`https://micro-blogging-dot-full-stack-course-services.ew.r.appspot.com/tweet`, tweet)
+          const newTweet = [tweet, ...tweets]
+          setTweets(newTweet)
         //  dispatch({
         //      type: ADD_TWEET, 
         //      payload: tweet
         //  })
-        console.log(tweet)
-        const newTweets = [tweet, ...tweets]
-        setTweets(newTweets)
-        localStorage.setItem('tweets', JSON.stringify(newTweets))
         } catch (error) {
             console.log(error)
         }
      }
+
         return(
             <TweetContext.Provider
                 value={{
                     tweets,
-                    getTweets,
                     addTweet
                 }}
             >
