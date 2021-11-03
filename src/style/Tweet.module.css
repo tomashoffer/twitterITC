@@ -1,0 +1,9 @@
+.tweetContainer{
+    position: absolute;
+    width: 600px;
+    height: 100px;
+    left: 367px;
+    top: 205px;
+    background: #343A40;
+    border-radius: 6px;
+}

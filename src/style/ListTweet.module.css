@@ -1,0 +1,41 @@
+.tweet{
+    margin-top: 40px
+}
+
+.tweetContainer{
+    position: relative;
+    width: 600px;
+    height: 100px;
+    left: 250px;
+    top: 205px;
+    background: #343A40;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.dataTweet{
+  display: flex;
+  justify-content: space-between;
+  color: #CCCCCC;
+  padding: 15px 30px;
+}
+.textTweet{
+  color: #CCCCCC;
+  padding: 0 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .tweet{
+    margin-top: 80px
+}
+  .tweetContainer{
+    width: 260px;
+    height: 100px;
+    left: 35px;
+    top: 120px;
+    background: #343A40;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+}
