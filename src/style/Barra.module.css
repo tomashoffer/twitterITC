@@ -1,14 +1,18 @@
-.barra{
+.contenedor{
+    margin: 0 auto;
     width: 60vw;
+}
+.barra{
     height: 58px;
     top: 10px;
     background: #343A40;
     border-radius: 6px;
-    margin: 0 auto;
 }
 
 .ul{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     list-style: none;
     margin: 0 35px;
     padding: 0;
@@ -16,29 +20,75 @@
     top: 13px;
 }
 
-#linkMargin{
-    margin-right: 45px;
+.list{
+    cursor: pointer;
+}
+
+.links{
+    display: flex;
 }
 
 .link{
     color: #FFFFFF;
     text-decoration: none;
+    margin-right: 45px;
+}
+
+.searchBar{
+    border-radius: 8px;
+    width: 160px;
+    margin-right: 5px;
+}
+
+.select{
+    border-radius: 8px;
+    width: 72px;
 }
 
 @media only screen and (max-width: 600px) {
+    .contenedor{
+        margin: 0 auto;
+        width: 100%;
+    }
     .barra{
-        width: 70vw;
-        height: 40px;
+        height: 58px;
+        top: 10px;
         background: #343A40;
         border-radius: 6px;
-        margin: 0 auto;
     }
+    #name{
+        display: none;
+    }
+    .searchBar{
+        display: none;
+    }
+    
+    .select{
+        display: none;
+    }
+    
     .ul{
         display: flex;
+        justify-content: space-between;
+        align-items: center;
         list-style: none;
-        margin: 0 35px;
         padding: 0;
-        position: relative;
-        top: 8px;
+    }
+    
+    .list{
+        cursor: pointer;
+    }
+    
+    .links{
+        display: flex;
+    }
+    
+    .link{
+        color: #FFFFFF;
+        text-decoration: none;
+
+    }
+    #logOut{
+        width: 100%;
     }
 }

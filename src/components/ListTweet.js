@@ -1,30 +1,17 @@
-import React, {useContext, useEffect, useState} from 'react'
+import React, {useContext} from 'react'
 import style from '../style/ListTweet.module.css'
-import TweetContext from '../context/tweet/tweetContext'
+import SpinnerContext from '../context/spinner/SpinnerContext'
+import Tweet from './Tweet'
 
-const ListTweet = () => {
-  const tweetContext = useContext(TweetContext);
-  const { tweets } = tweetContext;
-  const [allTweets, SetAllTweets] = useState(tweets)
+const ListTweet = ({searchResults, getSearchTerm}) => {
 
-  useEffect(() => {
-    SetAllTweets(tweets)
-  }, [tweets])
-  // const titulo = alltw.length === 0 ? 'There are no tweets' : null;
-
+  const spinnerContext = useContext(SpinnerContext);
+  const { spinner } = spinnerContext;
+  
     return ( 
+
         <div className={style.tweet}>
-          { allTweets.map((tweet) => (
-               <div key={tweet.id} className={style.tweetContainer}>
-               <div className={style.dataTweet}>
-                 <div>{tweet.userName}</div>
-                 <div>{tweet.date}</div>
-               </div>
-               <div className={style.textTweet}>
-                  <p>{tweet.content}</p>
-               </div>
-           </div>
-          ))}
+            {spinner ? null : <Tweet searchResults={searchResults} getSearchTerm={getSearchTerm}/>}
         </div>
      );
 }

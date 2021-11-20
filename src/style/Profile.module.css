@@ -1,0 +1,66 @@
+.profile{
+    margin: 0 auto;
+}
+.infoUser{
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile_title{
+    height: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 42px;
+
+    color: #FFFFFF;
+}
+
+  .profileImg{
+    border:2px solid #fff;
+    border-radius: 7px;
+    color:#fff;
+    height:72px;
+    width:72px;
+}
+.card{
+    margin: 0 auto;
+    width: 50vw;
+    margin-top: 10px;
+    background-color: #343A40;
+}
+.cardContent{
+    display: flex;
+}
+.divImg{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.nameinfo{
+    padding: 20px;
+}
+.followData{
+    display: flex;
+    justify-content:center;
+    align-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .profile_title{
+        position: absolute;
+        width: 103px;
+        height: 42px;
+        left: 50px;
+        top: 70px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 42px;
+        color: #FFFFFF;
+    }
+
+    
+  
+}

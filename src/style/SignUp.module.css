@@ -1,0 +1,171 @@
+.containerLogIn{
+    margin: 0 auto;
+}
+
+.title{
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.signUp{
+    color: #FFFFFF;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.inputLogIn{
+    width: 400px;
+    height: 40px;
+    border: 2px solid #CCCCCC;
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+
+.inputFile{
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    color: #fff;
+}
+
+
+
+.button{
+    width: 300px;
+    height: 40px;
+    background-color: #3B85FF;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.buttonForm{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.googleBtn{
+    width: 300px;
+    height: 40px;
+    background-color: #3B85FF;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.logIn{
+    width: 300px;
+    height: 40px;
+    background-color: #17325c;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .title{
+        text-align: center
+    }
+    
+    .signin{
+        color: #FFFFFF;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    
+    .form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .inputLogIn{
+        width: 280px;
+        height: 40px;
+        border: 2px solid #CCCCCC;
+        box-sizing: border-box;
+        border-radius: 6px;
+        margin-bottom: 15px;
+    }
+    
+    .button{
+        width: 300px;
+        height: 40px;
+        background-color: #3B85FF;
+        color: #fff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+    
+    .buttonForm{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .googleBtn{
+        width: 300px;
+        height: 40px;
+        background-color: #3B85FF;
+        color: #fff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+    
+    .logIn{
+        width: 300px;
+        height: 40px;
+        background-color: #17325c;
+        color: #fff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+  
+}
