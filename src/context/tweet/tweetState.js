@@ -134,9 +134,6 @@ const TweetState = (props) => {
       }
     };
 
-
-
-  
     
     useEffect(() => {
       getTweetsFromDB()

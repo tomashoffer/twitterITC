@@ -1,5 +1,4 @@
 import React, { useState, useContext, useCallback } from "react";
-import { Redirect } from "react-router";
 import AuthContext from '../context/auth/AuthContext'
 import app from "../firebase";
 import {storageRef} from "../firebase";

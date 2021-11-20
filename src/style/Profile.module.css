@@ -60,7 +60,33 @@
         line-height: 42px;
         color: #FFFFFF;
     }
+    .card{
+        margin: 0 auto;
+        width: 80vw;
+        margin-top: 10px;
+        background-color: #343A40;
+    }
+    .cardContent{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+    .profileImg{
+        border: 1px solid #ddd;	
+        border-radius: 4px;		
+        width: 100px;				
+        height: 100px;	
 
-    
+    }
+    .divImg{
+        margin-left: 20px;
+        margin-top: 20px;
+        text-align: center;
+    }
+    .nameinfo{
+        text-align: center
+    }
+    .cardBottons{
+        text-align: center
+    }
   
 }

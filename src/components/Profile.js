@@ -32,17 +32,17 @@ const Profile = (props) => {
     if (loggedUser) {
       setUserLogged(loggedUser);
     }
-    // if (props.match.params.id) {
-    //   setIsOtherUser(true);
-    //   getUserProfile(props.match.params.id);
-    //   getOtherUserTweets(props.match.params.id);
-    // }
+    if (props.match.params.id) {
+      setIsOtherUser(true);
+      getUserProfile(props.match.params.id);
+      getOtherUserTweets(props.match.params.id);
+      }
     // eslint-disable-next-line
   }, [
     setGeneralTweets,
     setIsOtherUser,
     otherUser,
-    user,
+      user,
     getUser,
     getOtherUserTweets,
     getUserProfile,
@@ -150,13 +150,15 @@ const Profile = (props) => {
                       </Typography>
                     </div>
                   </CardContent>
-                  <CardActions>
+                  <CardActions className={style.cardBottons}>
                     
                     {!seeLikes ? (
                       <Button 
                       onClick={() => myLikes(user.authId)} 
                       variant="contained" 
-                      size="small">
+                      size="small"
+                      style={{marginRight: '30px'}}
+                      >
                       Likes
                     </Button>
                     ) : (
@@ -164,27 +166,32 @@ const Profile = (props) => {
                         variant="contained"
                         size="small"
                         onClick={() => myLikes(user.authId)}
+                        style={{marginRight: '30px'}}
                       >
                        Tweets
                       </Button>
                     )}
-                    {user.usersFollowers.includes(currentId) ? (
-                      <Button
-                        variant="contained"
-                        size="small"
-                        onClick={() => unfollowUser(user)}
-                      >
-                        Unfollow
-                      </Button>
-                    ) : (
-                      <Button
-                        variant="contained"
-                        size="small"
-                        onClick={() => followUser(user)}
-                      >
-                        Follow
-                      </Button>
+                    {props.match.params.id === currentId ? null : 
+                    (<div>
+                       {user.usersFollowers.includes(currentId) ? (
+                        <Button
+                          variant="contained"
+                          size="small"
+                          onClick={() => unfollowUser(user)}
+                        >
+                          Unfollow
+                        </Button>
+                      ) : (
+                        <Button
+                          variant="contained"
+                          size="small"
+                          onClick={() => followUser(user)}
+                        >
+                          Follow
+                        </Button>
+                      )} </div>
                     )}
+                   
                   </CardActions>
                 </Card>
                 <div className={style.tweetsList}>
